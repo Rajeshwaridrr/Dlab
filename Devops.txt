@@ -1,0 +1,24 @@
+2 crating Maven Project:  "mvn archetype:generate \
+  -DgroupId=com.example.app \
+  -DartifactId=my-app \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DinteractiveMode=false
+"
+
+
+4th nano build.gradle:
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'com.example.App'
+}
